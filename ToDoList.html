@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/ToDoList.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/todolist.js"></script>
+</head>
+<body>
+<!--导航栏制作-->
+<header class="nav">
+    <div class="content w">
+        <h1>ToDoList</h1>
+        <label>
+            <input type="text" title="title" name="title" required="required" placeholder="添加ToDo" class="title" autocomplete="off">
+        </label>
+    </div>
+</header>
+<!--主体内容-->
+<section>
+    <!--    正在进行模块-->
+    <div class="doing w framework">
+        <h1>正在进行
+            <!--            正在进行事务计数-->
+            <span id="todoCount" class="count"></span>
+        </h1>
+        <!--        正在进行清单-->
+        <ol>
+
+        </ol>
+    </div>
+    <!--    已经完成模块-->
+    <div class="done w framework">
+        <h1>已经完成
+            <!--正在进行事务计数-->
+            <span id="doneCount" class="count"></span>
+        </h1>
+        <!--        正在进行清单-->
+        <ul>
+        </ul>
+    </div>
+</section>
+
+
+</body>
+</html>

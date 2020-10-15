@@ -1,0 +1,148 @@
+/*引入字体图标文件*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?607a4x');
+    src: url('../fonts/icomoon.eot?607a4x#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?607a4x') format('truetype'),
+    url('../fonts/icomoon.woff?607a4x') format('woff'),
+    url('../fonts/icomoon.svg?607a4x#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/*初始化页面*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #cdcdcd;
+}
+
+/*初始化结束*/
+/*限制主体内容的宽度*/
+.w {
+    width: 600px;
+}
+
+/*导航条开始*/
+.nav {
+    height: 50px;
+    line-height: 50px;
+    background-color: #323232;
+}
+
+.content {
+    margin: 0 auto;
+    height: 50px;
+    color: white;
+}
+
+.content h1 {
+    /*h1是块级元素，会把input挤下去*/
+    display: inline;
+    font-weight: 400;
+}
+
+/*导航栏TODO的输入框*/
+.title {
+    float: right;
+    margin-top: 13px;
+    outline: none;
+    width: 60%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.24), 0 1px 6px rgba(0, 0, 0, 0.45) inset;
+    /*文本框内文字缩进*/
+    text-indent: 10px;
+    /*如果有任何权限 user agent 必须提供填写表单字段值的自动帮助，并为浏览器提供关于字段中所期望的信息类型的指导。*/
+    /*autocomplete: off;*/
+}
+
+/*导航栏结束*/
+/*主体内容开始*/
+/*正在进行*/
+.framework {
+    position: relative;
+    margin: 30px auto;
+}
+
+.count {
+    position: absolute;
+    top: 8px;
+    right: 7px;
+    display: block;
+    padding: 0 5px;
+    height: 20px;
+    /*width: 21px;*/
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 19px;
+    background-color: #e6e6fa;
+}
+
+/*正在进行模块的小li*/
+.doing ol,
+.done ul {
+    margin-top: 15px;
+}
+
+.doing ol li,
+.done ul li {
+    position: relative;
+    display: block;
+    margin: 15px 0;
+    width: 600px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    line-height: 30px;
+    /*#629a9c*/
+}
+
+.doing ol li input,
+.done ul li input {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.done ul li {
+    background-color: #c0c0c0;
+}
+
+.doing ol li p,
+.done ul li p {
+    position: absolute;
+    top: -1px;
+    left: 50px;
+}
+
+.off {
+    position: absolute;
+    top: 1px;
+    right: 8px;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.off:after {
+    font-family: 'icomoon', serif;
+    content: "\ea54";
+    font-size: 20px;
+}
