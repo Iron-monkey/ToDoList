@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     // 提前检索出需要多次引用的元素，避免重复选择，因为js检索DOM对象非常耗时。
     let ol = $('ol');
     let ul = $('ul');
@@ -7,17 +7,16 @@ $(function () {
     load();
 
     // 1. 在title处按下回车则把数据存入本地存储
-    $('.title').on('keydown', function (event) {
+    $('.title').on('keydown', function(event) {
         // 回车键的ASCII码是13
         if (event.keyCode === 13) {
             // 获取到本地存储的数据
             let todoData = getData();
             // 写入数据
             todoData.push({
-                    title: $(this).val(),
-                    done: false
-                }
-            );
+                title: $(this).val(),
+                done: false
+            });
             // 把新的数据保存到本地存储
             saveDate(todoData);
             // 2. 把数据渲染到页面
@@ -29,7 +28,7 @@ $(function () {
 
     // 3. 删除操作
 
-    ulAndOl.on('click', 'a', function () {
+    ulAndOl.on('click', 'a', function() {
         // 获取数据
         let data = getData();
         // 删除数据
@@ -40,7 +39,7 @@ $(function () {
     });
 
     // 4. 正在进行和已经完成状态互相转换
-    ulAndOl.on('click', 'input', function () {
+    ulAndOl.on('click', 'input', function() {
         // ① 获取本地存储的数据
         let data = getData();
         // ②获取我点击的元素的索引值
@@ -77,7 +76,7 @@ $(function () {
         let data = getData();
         // 先清空ol里面的数据，防止重复渲染
         ulAndOl.empty();
-        $.each(data, function (index, content) {
+        $.each(data, function(index, content) {
             if (content.done) {
                 ul.prepend("<li>" +
                     "<input type='checkbox' checked='checked'>" +
@@ -98,3 +97,4 @@ $(function () {
         $('#doneCount').html(doneCount);
     }
 });
+// 我把代码更改了
